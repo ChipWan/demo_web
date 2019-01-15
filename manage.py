@@ -32,7 +32,7 @@ def init_database():
         user = User.query.get(i)
         user.user_name = '[even]' + user.user_name
     User.query.filter_by(id=1).update({'user_name': '[just_No_1]'})
-    db.session.delete(Comment.query.get(2))
+    # db.session.delete(Comment.query.get(2))
     db.session.commit()
 
     print(User.query.all())
